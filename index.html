@@ -53,12 +53,12 @@
             </div>
 
             <div class="row g-3 mt-0">
-                <div class="col-md-12 col-sx-6 d-flex">
-                    <div class="w-100 ms-3">
-                        <label for="city" class="form-label">* City</label>
-                        <input type="text" class="form-control" id="city" required>
-                    </div>
-                    <div class="w-50 ms-5 me-2">
+                <div class="col w-100 ms-3">
+                    <label for="city" class="form-label">* City</label>
+                    <input type="text" class="city form-control" id="city" required>
+                </div>
+                <div class="location col-md-6 d-flex">
+                    <div class="state w-50 ms-5 me-2">
                         <label for="state" class="form-label">* State</label>
                         <select id="state" class="form-select" style="height:37px; font-size:13px" required>
                             <option selected>Pick a state</option>
@@ -69,7 +69,7 @@
                             <option>Amazonas</option>
                         </select>
                     </div>
-                    <div class="w-50 mx-3">
+                    <div class="postal col col-lg-2 col-md-3 w-50 mx-3">
                         <label for="postal" class="form-label">Postal Code</label>
                         <input type="number" class="form-control" id="postal">
                     </div>
@@ -121,15 +121,39 @@
                     .payments {
                         width: 65%;
                     }
+                    .location {
+                        width: 57%;
+                    }
+                    .city {
+                        width: 116%;
+                    }
+                    .state {
+                        margin-right: 0px;
+                        margin-left: 5px;
+                    }
                 }
                 @media (min-width: 992px) {
                     .payments {
                         width: 45%;
                     }
+                    .location {
+                        width: 50%;
+                    }
+                    .postal {
+                        width: 40%;
+                    }
+                    .city {
+                        width: 99%;
+                    }
+                    .state {
+                        margin-right: 0px !important;
+                        margin-left: 5px !important;
+                    }
                 }
             </style>
             <script>
                 function setAction(form) {
+                    window.location.href = "response.html";
                     return false;
                 }
             </script>
